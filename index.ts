@@ -325,7 +325,7 @@ const memoryLanceDBProPlugin = {
         migrator,
         embedder,
       }),
-      { commands: ["memory"] }
+      { commands: ["memory-pro"] }
     );
 
     // ========================================================================

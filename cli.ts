@@ -41,7 +41,7 @@ function formatJson(obj: any): string {
 
 export function registerMemoryCLI(program: Command, context: CLIContext): void {
   const memory = program
-    .command("memory")
+    .command("memory-pro")
     .description("Enhanced memory management commands");
 
   // List memories
@@ -607,5 +607,5 @@ export function registerMemoryCLI(program: Command, context: CLIContext): void {
 // ============================================================================
 
 export function createMemoryCLI(context: CLIContext) {
-  return (program: Command) => registerMemoryCLI(program, context);
+  return ({ program }: { program: Command }) => registerMemoryCLI(program, context);
 }
