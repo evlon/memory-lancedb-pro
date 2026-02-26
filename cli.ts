@@ -35,6 +35,11 @@ function getPluginVersion(): string {
   }
 }
 
+function clampInt(value: number, min: number, max: number): number {
+  const n = Number.isFinite(value) ? value : min;
+  return Math.max(min, Math.min(max, Math.trunc(n)));
+}
+
 function formatMemory(memory: any, index?: number): string {
   const prefix = index !== undefined ? `${index + 1}. ` : "";
   const date = new Date(memory.timestamp || memory.createdAt || Date.now()).toISOString().split('T')[0];
